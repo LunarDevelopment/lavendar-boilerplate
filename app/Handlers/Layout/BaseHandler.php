@@ -31,12 +31,14 @@ class BaseHandler
 
             //append_section('head.style', ['style' => 'css/app.css']);
             append_section('head.style', ['style' => 'css/main.css']);
+            append_section('head.style', ['style' => 'https://fonts.googleapis.com/icon?family=Material+Icons']);
 
             append_section('head.script', ['script' => 'https://code.jquery.com/jquery-2.1.1.min.js']);
             append_section('head.script', ['script' => 'js/materialize.min.js']);
             append_section('head.script', ['script' => 'js/app.js']);
 
             append_section('head.meta', ['meta' => ['name' => 'robots', 'content' => 'noindex, nofollow']]);
+            append_section('head.meta', ['meta' => ['name' => 'viewport', 'content' => 'width=device-width, initial-scale=1.0']]);
 
         });
 

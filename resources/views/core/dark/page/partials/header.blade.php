@@ -24,23 +24,37 @@
 
 </div>
 
-<div class="bottom">
+    <div class="navbar-fixed">
+        <nav class="light-blue darken-1" role="navigation">
+            <div class="nav-wrapper">
+                <a href="#" data-activates="nav-mobile" class="button-collapse">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
 
-    <nav>
-        <div class="nav-wrapper">
+                    @yield('top.navigation.before')
 
-            <ul class="right hide-on-med-and-down">
+                    @menu('top.navigation')
 
-                @yield('top.navigation.before')
+                    @yield('top.navigation.after')
 
-                @menu('top.navigation')
+                </ul>
+                <ul class="side-nav" id="nav-mobile">
 
-                @yield('top.navigation.after')
+                    @yield('top.navigation.before')
 
-            </ul>
-        </div>
-    </nav>
+                    @menu('top.navigation')
 
-</div>
+                    @yield('top.navigation.after')
 
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+<script>
+    $( document ).ready(function(){
+        $(".button-collapse").sideNav();
+    })
+</script>
 @yield('header.after')

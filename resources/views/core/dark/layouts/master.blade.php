@@ -6,21 +6,21 @@
 <body>
     @yield('body.before')
     <header>
-        <div class="container">
+        <div class="">
             @yield('header.before')
             @yield('header')
             @yield('header.after')
         </div>
     </header>
     <main>
-        <div class="container">
+        <div class="section">
             @yield('main.before')
             @yield('main')
             @yield('main.after')
         </div>
     </main>
     <footer>
-        <div class="container">
+        <div class="section">
             @yield('footer.before')
             @yield('footer')
             @yield('footer.after')
